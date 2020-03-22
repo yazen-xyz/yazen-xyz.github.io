@@ -1,0 +1,20 @@
+sudo: true
+dist: trusty
+language: generic
+
+addons:
+  apt:
+    packages:
+    - snapd
+
+install:
+  - sudo snap install hugo
+  - export PATH=/snap/bin:$PATH
+
+script:
+  - hugo --enableGitInfo
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: a925d9ee8f0331e56caaf47f9054e3c53960e993  # 在Travis CI 后台设置私密的 Gitbub Token 配置项
