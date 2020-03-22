@@ -17,6 +17,8 @@ install:
     - wget https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_0.67.1_Linux-64bit.deb
     - sudo dpkg -i hugo*.deb
     - hugo version
+    - ls
+    - pwd
 
 script:
 # 运行hugo命令
