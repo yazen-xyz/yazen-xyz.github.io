@@ -1,0 +1,13 @@
+{{- define "main" }}
+<section class="container-fluid products">
+    <div class="container">
+        <h1>Products</h1>
+        <div class="row mt-5">
+            {{ $paginator := .Paginate (where site.Pages "Type" "products") 8 }}
+            {{ range $paginator.Pages }}
+            {{ partial "product" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{- end }}

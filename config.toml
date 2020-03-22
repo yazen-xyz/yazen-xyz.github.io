@@ -1,3 +1,29 @@
 baseURL = "http://yazen.xyz"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "YAZEN"
+
+[params]
+  ga_analytics='123123'
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "products"
+    name = "Products"
+    url = "/products"
+    weight = 2
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts"
+    weight = 3
+  [[menu.main]]
+    identifier = "About US"
+    name = "About US"
+    url = "/about"
+    weight = 4

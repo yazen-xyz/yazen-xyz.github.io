@@ -1,1 +1,38 @@
-<div>底部</div>
+<footer class="container-fluid mt-5">
+    <div class="container">
+        <div class="row pt-4 pb-4">
+            <div class="col-lg-4">
+                <h2 class="mt-0">YAZEN</h2>
+                <p>The world is beautiful because of you.</p>
+                <p><b>Email:</b> vip@yazen.xyz</p>
+                <p>&copy;&nbsp;{{ now.Format "2006"}}&nbsp;YAZEN
+            </div>
+            <div class="col-lg-4 qu">
+                <h3>Quick Links</h3>
+                {{ range first 8 site.Pages }}
+                <p class="link"><a href="{{ .Permalink }}">{{ .Title }}{{ .Type }}</a></p>
+                {{ end }}
+            </div>
+            <div class="col-lg-4">
+                <h3>Subscribe for more free gifts</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{{- $mainScriptPath := "js/index.js" }}
+{{- $scripts := resources.Get $mainScriptPath | resources.ExecuteAsTemplate $mainScriptPath . | resources.Minify | resources.Fingerprint "sha512" }}
+<script src='{{ $scripts.Permalink }}'></script>
+{{ partial "analytics" . }}
