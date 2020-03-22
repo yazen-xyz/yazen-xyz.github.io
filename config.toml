@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "YAZEN"
 
 [params]
-  ga_analytics='123123'
+  ga_analytics='UA-142977531-1'
 
 [menu]
 
