@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://yazen.xyz/ja/categories/</loc>
+    <loc>http://www.yazen.xyz/ja/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://yazen.xyz/categories/"
+                href="http://www.yazen.xyz/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://yazen.xyz/ja/categories/"
+                href="http://www.yazen.xyz/ja/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://yazen.xyz/ja/tags/</loc>
+    <loc>http://www.yazen.xyz/ja/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://yazen.xyz/tags/"
+                href="http://www.yazen.xyz/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://yazen.xyz/ja/tags/"
+                href="http://www.yazen.xyz/ja/tags/"
                 />
   </url>
   
   <url>
-    <loc>http://yazen.xyz/ja/</loc>
+    <loc>http://www.yazen.xyz/ja/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://yazen.xyz/"
+                href="http://www.yazen.xyz/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://yazen.xyz/ja/"
+                href="http://www.yazen.xyz/ja/"
                 />
   </url>
   
