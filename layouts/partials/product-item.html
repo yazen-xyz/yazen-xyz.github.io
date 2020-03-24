@@ -1,0 +1,12 @@
+<div class="col product-item">
+    <div class="card border-0 ml-0 mr-0">
+        <a class="text-decoration-none" href="{{ .Permalink }}">
+            <img src="{{ index .Params.photos 0 }}" class="card-img-top mt-0 mb-0" alt="{{ .Title }}">
+            <div class="card-body">
+                <h5 class="card-title mt-0">{{ .Title }}</h5>
+                <p class="card-text">{{ .Params.description }}</p>
+                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
+        </a>
+    </div>
+</div>

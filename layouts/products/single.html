@@ -1,0 +1,49 @@
+{{- define "main" }}
+
+<nav class="container-fluid p-0" style="background-color: #e9ecef;" aria-label="breadcrumb">
+    <ol class="breadcrumb container mb-0">
+        <li class="breadcrumb-item"><a href="{{ .Parent.Parent.Permalink }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ .Parent.Permalink }}">Products</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+    </ol>
+</nav>
+
+<section class="container mt-5">
+    <h1>{{ .Description }}</h1>
+    <div class="row">
+        <div class="col col-md-5">
+            <div id="product-pictures" class="carousel slide product-carousel" data-ride="carousel">
+                <div class="carousel-inner">
+                    {{ range $index, $item := .Params.photos }}
+                    <div class="carousel-item {{ if eq $index 0 }} active {{end}}">
+                        <img src="{{ . }}" class="d-block w-100" alt="{{$index}}">
+                    </div>
+                    {{ end }}
+                </div>
+                <a class="carousel-control-prev" href="#product-pictures" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#product-pictures" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col" id="infomation-cart">
+            {{ range .Params.bullets }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <div class="cart-button">
+                <a class="btn btn-primary"  href="">Buy on Amazon</a>
+            </div>
+        </div>
+    </div>
+    <article id="content">
+        {{ .Content }}
+    </article>
+</section>
+<script>
+
+</script>
+{{- end }}
