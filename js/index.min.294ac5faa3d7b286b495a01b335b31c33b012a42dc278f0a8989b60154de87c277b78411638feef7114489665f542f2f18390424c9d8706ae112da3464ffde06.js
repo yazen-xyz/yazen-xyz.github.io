@@ -1,0 +1,2 @@
+$(function(){var lang=navigator.language||navigator.userLanguage;lang=lang.substr(0,2);if($('[hreflang='+lang+']').length>0){window.location.href='/'+lang;}
+setTimeout(()=>{$('main.d-none').removeClass('d-none');$('div.spinner-container').remove();},1000);})
