@@ -11,7 +11,7 @@ body
   font-family: var(--font)
   background-color: var(--bg)
   color: var(--text)
-  font-size: 16px
+  font-size: 14px
   line-height: 1.5
   max-width: 1440px
   margin: 0 auto
@@ -113,35 +113,3 @@ aside
 span
   &.pager_link
     opacity: 0.5
-
-ol
-  counter-reset: my-awesome-counter
-  list-style: none !important
-  padding-left: 3rem
-  margin-left: 0.5rem
-  @media screen and (min-width: 667px)
-    // margin-left: 1rem
-  li 
-    margin: 0 0 0.5rem 0
-    counter-increment: my-awesome-counter
-    position: relative
-    padding-left: 0.5rem !important
-    &::before
-      content: counter(my-awesome-counter)
-      font-size: 1.15rem
-      display: inline-grid
-      align-items: center
-      font-weight: 500
-      position: absolute
-      --size: 1.8rem
-      left: -2rem
-      line-height: var(--size)
-      width: var(--size)
-      height: var(--size)
-      color: var(--theme)
-      border-radius: 50%
-      text-align: center
-      top: 0.25rem
-      border-right: 2px solid var(--theme)
-    &.align::before
-      top: 1rem

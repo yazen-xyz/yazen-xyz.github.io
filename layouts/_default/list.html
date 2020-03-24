@@ -1,0 +1,21 @@
+{{- define "main" }}
+<nav class="container-fluid p-0" style="background-color: #e9ecef;" aria-label="breadcrumb">
+    <ol class="breadcrumb container mb-0">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+    </ol>
+</nav>
+
+<section class="container-fluid">
+    <div class="container">
+        <h1>Products</h1>
+        <div class="card-deck row row-cols-sm-1 row-cols-md-2 row-cols-lg-4 products">
+            {{ $list := where (where site.Pages "Type" "products") "IsPage" true }}
+            {{ $paginator := .Paginate $list  8 }}
+            {{ range $paginator.Pages }}
+            {{ partial "product-item" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{- end }}

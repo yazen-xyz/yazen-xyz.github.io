@@ -1,12 +1,13 @@
 baseURL = "http://yazen.xyz"
-languageCode = "en-us"
 title = "YAZEN"
+description = "YAZEN"
+DefaultContentLanguage = "en"
+copyright = "YAZEN"
 
 [params]
   ga_analytics='UA-142977531-1'
 
 [menu]
-
   [[menu.main]]
     identifier = "home"
     name = "Home"
@@ -22,8 +23,24 @@ title = "YAZEN"
     name = "Blog"
     url = "/posts"
     weight = 3
-  [[menu.main]]
-    identifier = "About US"
-    name = "About US"
-    url = "/about"
-    weight = 4
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  
+  [languages.ja]
+    languageName = "Japanese"
+    weight = 2
+    [[languages.ja.menu.main]]
+    url    = "/"
+    name   = "Home"
+    weight = 1
+    [[languages.ja.menu.main]]
+    url    = "/ja/products"
+    name   = "Products"
+    weight = 2
+    [[languages.ja.menu.main]]
+    url    = "/ja/blog"
+    name   = "Blog"
+    weight = 3
